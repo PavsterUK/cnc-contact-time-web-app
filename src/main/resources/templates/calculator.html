@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{../templates/layouts/layout.html}">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+   <title>CNC Contact Time</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="calc-body-bg ">
+            <div class="calc-body-content" >
+                <div class="calc-body-grid">
+                    <div class="top-buttons-div">
+                        <button class="choose-file-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                            </svg>
+                            Load File
+                        </button>
+                        <button class="save-as-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                            </svg>
+                            Save As
+                        </button>
+                    </div>
+                    <div class="input-fields">
+                        <div class="cycle-block-no">
+                            <label>Cycle 1st line:
+                                <input type='text' name='theinput' id='cycle-block-nr'>
+                            </label>
+                        </div>
+                        <div class="cycle-block-no">
+                            <label>Contact Time:
+                                <input type='text' placeholder="Mins" name='theinput' id='theinput'>
+                            </label>
+                        </div>
+                        <div class="cycle-block-no">
+                            <label>M00 Z Coord:
+                                <input type='text' name='theinput' id='theinput'>
+                            </label>
+                        </div>
+                        <div class="cycle-block-no">
+                            <label>M00 Z Coord:
+                                <input type='text' name='theinput' id='theinput'>
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Internal Operation</label>
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button id="calc-btn" type="button">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="text-area-bg">
+        <div class="text-area-gb--header">
+            G-Code Viewer
+        </div>
+        <textarea></textarea>
+    </div>
+</section>
+</body>
+</html>
