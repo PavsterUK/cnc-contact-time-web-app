@@ -216,8 +216,8 @@ h2 {
     width: 350px;
     height: 430px;
     position: relative;
-    left: 500px;
-    bottom: -150px;
+    left: 540px;
+    bottom: -30px;
 
 
     background: rgb(199, 199, 199);
@@ -247,8 +247,9 @@ width:100%;
 }
 
 .top-buttons-div{
-display:flex;
-flex-wrap: nowrap;
+    width: 100%;
+    background-color: rgb(0, 47, 6);
+    height: 50px;
 }
 
 .top-buttons-div button:active{
@@ -282,7 +283,6 @@ color:white;
 .input-fields {
     padding: 20px;
     font-size: 2rem;
-    border: 1px solid green;
 }
 
 
@@ -348,7 +348,7 @@ textarea:focus-visible {
 .text-area-bg {
     position: relative;
     width:500px;
-    height: 800px;
+    height: 600px;
     left: 900px;
     bottom: 400px;
     border-radius: 5px 5px 5px 5px;
@@ -357,13 +357,13 @@ textarea:focus-visible {
 
 textarea {
     background-color: black;
-    color: green;
+    color: rgb(0, 189, 0);
     width: 100%;
-    height: 800px;
+    height: 600px;
     margin-bottom: -5px;
     border: none;
     resize: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -375,6 +375,7 @@ textarea {
     font-size: 2rem;
     text-align: center;
     color: white;
+    padding-top: 5px;
 }
 
 
