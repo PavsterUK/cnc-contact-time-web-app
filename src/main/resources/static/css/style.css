@@ -90,7 +90,6 @@ button {
     font-size: 2rem;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px 23px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 0px 23px rgba(0,0,0,0);
-    
 }
 button:hover{
     background:rgba(24, 129, 55, 0.9);
@@ -100,6 +99,8 @@ button:active{
     transform:scale(.9);
     box-shadow:none;
 }
+
+
 
 
 @keyframes fadein {
@@ -350,6 +351,9 @@ textarea:focus-visible {
     -ms-animation: fadein 5s; /* Internet Explorer */
     -o-animation: fadein 5s; /* Opera < 12.1 */
     animation: fadein 5s;
+    webkit-box-shadow: 36px 25px 32px 11px rgba(0,0,0,0.72);
+    box-shadow: 36px 25px 32px 11px rgba(0,0,0,0.72);
+
 }
 
 textarea {
