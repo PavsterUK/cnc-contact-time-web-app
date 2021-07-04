@@ -22,7 +22,7 @@ video {
 
 .greetings-disclaimer {
     width: 600px;
-    height: 250px;
+    height: 350px;
     position: absolute;
     left: 40%;
     top: 10%;
@@ -38,6 +38,7 @@ video {
     margin-right: 2rem;
     float: right;
     font-size: 2rem;
+    text-align: center;
 
     -webkit-box-shadow: 36px 25px 32px 11px rgba(0,0,0,0.72); 
     box-shadow: 36px 25px 32px 11px rgba(0,0,0,0.72);
@@ -134,7 +135,8 @@ button:active{
 /* ############### layout.html styles ###################### */
 
 .navbar {
-    justify-content: normal;
+    justify-content: center;
+
 }
 
 ul {
@@ -149,9 +151,13 @@ ul {
 }
 
 li {
-  float: left;
-  border-right:1px solid #bbb;
+    border-right:1px solid #bbb;
 }
+
+li:last-child {
+    border: none;
+}
+
 
 li a {
   display: block;
@@ -168,12 +174,12 @@ li a:hover{
 .footer {
     text-align: center;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding .2rem;
     position: fixed;
     bottom: 0px;
     background-color: #333;
     color: white;
-    width:100vw;
+    width:100%;
   }
 
   /* ############### contact.html styles ###################### */
@@ -214,7 +220,7 @@ h2 {
 
 .calc-body-bg {
     width: 350px;
-    height: 430px;
+    height: 600px;
     position: relative;
     left: 540px;
     bottom: -30px;
@@ -246,45 +252,32 @@ height:800px;
 width:100%;
 }
 
-.top-buttons-div{
+.calc-body-grid--header {
+     width: 100%;
+     background-color: rgb(0, 47, 6);
+     height: 50px;
+     color: white;
+     text-align: center;
+     font-size: 2rem;
+     padding-top: 5px;
+}
+
+.file-btn button {
     width: 100%;
-    background-color: rgb(0, 47, 6);
-    height: 50px;
-}
-
-.top-buttons-div button:active{
-    transform: none;
-    box-shadow:none;
-    background-color:rgba(38, 207, 89, 0.9);
-    border-style:none;
-}
-
-.choose-file-button{
-width: 50%;
-height: 50px;
-box-shadow: none;
-border: none;
-border-radius: 8px 0px 0px 0px;
-background-color: rgb(0, 47, 6);
-color:white;
-
-}
-
-.save-as-button{
-    width: 50%;
-    height: 50px;
-    border: none;
+    text-align: center;
+    padding-top: 10px;
     box-shadow: none;
-    border-radius: 0px 8px 0px 0px;
-    background-color: rgb(0, 47, 6);
-    color:white;
+}
+
+.file-btn button:active {
+    transform:scale(1);
+    box-shadow:none;
 }
 
 .input-fields {
     padding: 20px;
     font-size: 2rem;
 }
-
 
 input[type=text] {
   background: rgb(199, 199, 199);
@@ -299,17 +292,17 @@ input[type=text] {
 }
 
 ::placeholder {
-   color: grey;
+   color: rgb(0, 189, 0);
    opacity: .4; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: grey;
+    color: rgb(0, 189, 0);
     opacity: .4;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: grey;
+    color: rgb(0, 189, 0);
     opacity: .4;
 }
 
@@ -350,21 +343,25 @@ textarea:focus-visible {
     width:500px;
     height: 600px;
     left: 900px;
-    bottom: 400px;
+    bottom: 570px;
     border-radius: 5px 5px 5px 5px;
-
+    webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera < 12.1 */
+    animation: fadein 5s;
 }
 
 textarea {
     background-color: black;
     color: rgb(0, 189, 0);
     width: 100%;
-    height: 600px;
+    height: 550px;
     margin-bottom: -5px;
     border: none;
     resize: none;
     font-size: 2rem;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .text-area-gb--header {
@@ -377,5 +374,7 @@ textarea {
     color: white;
     padding-top: 5px;
 }
+
+
 
 

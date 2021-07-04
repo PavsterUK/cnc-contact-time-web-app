@@ -2,9 +2,7 @@
 <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{../templates/layouts/layout.html}">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css">
    <title>CNC Contact Time</title>
 </head>
 <body>
@@ -12,8 +10,17 @@
     <div class="calc-body-bg ">
             <div class="calc-body-content" >
                 <div class="calc-body-grid">
-                    <div class="top-buttons-div">
+                    <div class="calc-body-grid--header">
                         Select/Enter Data
+                    </div>
+                    <div class="file-btn">
+                        <button type="button">Open File</button>
+                    </div>
+                    <div class="file-btn">
+                        <button type="button">Save Changes</button>
+                    </div>
+                    <div class="file-btn">
+                        <button type="button">Save File As</button>
                     </div>
                     <div class="input-fields">
                         <div class="cycle-block-no">
@@ -51,7 +58,7 @@
         <div class="text-area-gb--header">
             G-Code Viewer
         </div>
-        <textarea></textarea>
+        <textarea id="g-code" placeholder="### Load G-Code File ###"></textarea>
     </div>
 </section>
 </body>

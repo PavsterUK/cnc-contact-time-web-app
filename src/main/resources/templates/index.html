@@ -7,12 +7,14 @@
 </head>
 <body>
 <section layout:fragment="content">
-        <div class="greetings-disclaimer centered fadein">
+        <div class="greetings-disclaimer centered ">
             <div class="greetings-disclaimer-text">
-                <h1>Warning!</h1>
-                <p>Please use this tool responsibly and always double check G-code before loading it into CNC. </p>
-                <p>This application has been heavily tested and </p>
-                <button>OK</button>
+                <form method="get" action="/calculator">
+                    <h1>Warning!</h1>
+                    <p>Please use this tool responsibly and always double check G-code before loading it into CNC. </p>
+                    <p>This application has been heavily tested and </p>
+                    <button type="submit">OK</button>
+                </form>
             </div>
         </div>
 </section>

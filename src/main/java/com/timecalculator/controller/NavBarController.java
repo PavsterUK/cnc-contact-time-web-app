@@ -16,7 +16,7 @@ public class NavBarController {
         return "contact";
     }
 
-    @RequestMapping("/about")
+    @RequestMapping("/calculator")
     public String about() {
         return "calculator";
     }
