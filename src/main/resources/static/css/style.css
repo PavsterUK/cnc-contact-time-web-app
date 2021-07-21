@@ -8,6 +8,8 @@ html {
 }
 body {
     box-sizing: border-box;
+    background-image: url("/images/bgpic.jpg");
+    background-repeat: no-repeat;
 }
 
 video {
@@ -19,6 +21,18 @@ video {
     top: 0;
     left: 0;
 }
+
+#bg-pic {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
 
 .greetings-disclaimer {
     width: 600px;

@@ -59,7 +59,9 @@
         <div class="text-area-gb--header">
             G-Code Viewer
         </div>
-        <textarea id="g-code" placeholder="### Load G-Code File ###"></textarea>
+        <textarea th:text="${gCode}" id="g-code" placeholder="### Load G-Code File ###">
+
+        </textarea>
     </div>
 </section>
 </body>

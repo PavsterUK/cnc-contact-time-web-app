@@ -1,7 +1,6 @@
 
 package com.timecalculator.domain;
 
-import javax.swing.*;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,37 +10,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class InputFileManager {
+public class UserInputDataManager {
 
     private File file;
     private List<String> ncList; // File as List of Strings
 
-    public InputFileManager(File file){
-        this.file = file;
-        this.ncList = makeStringList();
+
+    public UserInputDataManager() {
     }
 
-    public InputFileManager() {
-        chooseFile();
-    }
 
-    private void chooseFile(){
-        JFileChooser chooser = new JFileChooser();
-        int returnVal = chooser.showOpenDialog(null);
-        if(returnVal == JFileChooser.APPROVE_OPTION) {
-            this.file = chooser.getSelectedFile();
-            this.ncList = makeStringList();
-        }
-
-    }
-
-    private List<String> makeStringList(){
+    private List<String> textToListOfStringsByNewLine(String gCodeText){
         List<String> gCodeList = new ArrayList<>();
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader(file.getAbsolutePath()));
+            reader = new BufferedReader(new FileReader(gCodeText));
             String line = null;
-            while ( (line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 gCodeList.add(line);
             }
             reader.close();
@@ -99,7 +84,7 @@ public class InputFileManager {
     }
 
     //Replace Operation
-    public static List<String> replaceOpAndSaveFile(InputFileManager procFile, List<String> newOp, List<String> oldOp){
+    public static List<String> replaceOpAndSaveFile(UserInputDataManager procFile, List<String> newOp, List<String> oldOp){
         List<String> ncList = procFile.getNcList();
         int opStart = Collections.indexOfSubList(ncList, oldOp);
         int opEnd = 0;
