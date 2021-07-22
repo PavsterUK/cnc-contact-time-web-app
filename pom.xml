@@ -50,6 +50,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<dependency>
+			<groupId>org.webjars.bowergithub.headcr4sh</groupId>
+			<artifactId>node-maven</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
