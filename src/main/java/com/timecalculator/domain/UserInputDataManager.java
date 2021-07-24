@@ -15,7 +15,6 @@ public class UserInputDataManager {
     private File file;
     private List<String> ncList; // File as List of Strings
 
-
     public UserInputDataManager() {
     }
 
