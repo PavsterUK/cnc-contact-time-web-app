@@ -1,7 +1,7 @@
 FROM openjdk:11
 
-ADD target/Contact-time-calculator.jar Contact-time-calculator.jar
+ADD target/cnc-contact-time.jar cnc-contact-time.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "Contact-time-calculator.jar"]
+ENTRYPOINT ["java", "-jar", "cnc-contact-time.jar"]
