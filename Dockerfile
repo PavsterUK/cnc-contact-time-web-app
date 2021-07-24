@@ -1,7 +1,7 @@
 FROM openjdk:11
 
-ADD target/contact-time-webApp.jar contact-time-webApp.jar
+ADD target/Contact-time-calculator.jar Contact-time-calculator.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "contact-time-webApp.jar"]
+ENTRYPOINT ["java", "-jar", "Contact-time-calculator.jar"]
