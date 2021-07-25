@@ -19,7 +19,7 @@ public class NavBarController {
 
     @RequestMapping("/calculator")
     public String about(Model model) {
-        model.addAttribute("gCode", "Please add fucking G-code File");
+        model.addAttribute("gCode", "Please upload G-code File");
         return "calculator";
     }
 }
